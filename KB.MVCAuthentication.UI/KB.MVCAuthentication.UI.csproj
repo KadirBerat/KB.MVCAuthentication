@@ -1,0 +1,818 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C359D0B0-907D-4996-9243-150AA9D4FA41}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KB.MVCAuthentication.UI</RootNamespace>
+    <AssemblyName>KB.MVCAuthentication.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44383</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.7\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.7\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.7\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\LoginContent\css\sb-admin.css" />
+    <Content Include="Content\LoginContent\css\sb-admin.min.css" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Content\LoginContent\vendor\chart.js\Chart.bundle.js" />
+    <Content Include="Content\LoginContent\vendor\chart.js\Chart.bundle.min.js" />
+    <Content Include="Content\LoginContent\vendor\chart.js\Chart.js" />
+    <Content Include="Content\LoginContent\vendor\chart.js\Chart.min.js" />
+    <Content Include="Content\LoginContent\vendor\datatables\dataTables.bootstrap4.css" />
+    <Content Include="Content\LoginContent\vendor\datatables\dataTables.bootstrap4.js" />
+    <Content Include="Content\LoginContent\vendor\datatables\dataTables.bootstrap4.min.css" />
+    <Content Include="Content\LoginContent\vendor\datatables\dataTables.bootstrap4.min.js" />
+    <Content Include="Content\LoginContent\vendor\datatables\jquery.dataTables.js" />
+    <Content Include="Content\LoginContent\vendor\datatables\jquery.dataTables.min.js" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\css\all.css" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\css\all.min.css" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\css\brands.css" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\css\brands.min.css" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\css\fontawesome.css" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\css\fontawesome.min.css" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\css\regular.css" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\css\regular.min.css" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\css\solid.css" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\css\solid.min.css" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\css\svg-with-js.css" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\css\svg-with-js.min.css" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\css\v4-shims.css" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\css\v4-shims.min.css" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\js\all.js" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\js\all.min.js" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\js\brands.js" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\js\brands.min.js" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\js\fontawesome.js" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\js\fontawesome.min.js" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\js\regular.js" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\js\regular.min.js" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\js\solid.js" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\js\solid.min.js" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\js\v4-shims.js" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\js\v4-shims.min.js" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\LICENSE.txt" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\sprites\brands.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\sprites\regular.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\sprites\solid.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\500px.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\accessible-icon.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\accusoft.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\acquisitions-incorporated.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\adn.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\adobe.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\adversal.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\affiliatetheme.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\airbnb.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\algolia.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\alipay.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\amazon-pay.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\amazon.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\amilia.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\android.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\angellist.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\angrycreative.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\angular.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\app-store-ios.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\app-store.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\apper.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\apple-pay.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\apple.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\artstation.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\asymmetrik.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\atlassian.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\audible.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\autoprefixer.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\avianex.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\aviato.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\aws.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\bandcamp.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\battle-net.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\behance-square.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\behance.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\bimobject.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\bitbucket.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\bitcoin.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\bity.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\black-tie.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\blackberry.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\blogger-b.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\blogger.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\bluetooth-b.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\bluetooth.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\bootstrap.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\btc.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\buffer.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\buromobelexperte.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\buysellads.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\canadian-maple-leaf.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\cc-amazon-pay.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\cc-amex.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\cc-apple-pay.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\cc-diners-club.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\cc-discover.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\cc-jcb.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\cc-mastercard.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\cc-paypal.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\cc-stripe.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\cc-visa.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\centercode.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\centos.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\chrome.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\chromecast.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\cloudscale.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\cloudsmith.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\cloudversify.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\codepen.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\codiepie.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\confluence.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\connectdevelop.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\contao.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\cpanel.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\creative-commons-by.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\creative-commons-nc-eu.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\creative-commons-nc-jp.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\creative-commons-nc.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\creative-commons-nd.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\creative-commons-pd-alt.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\creative-commons-pd.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\creative-commons-remix.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\creative-commons-sa.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\creative-commons-sampling-plus.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\creative-commons-sampling.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\creative-commons-share.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\creative-commons-zero.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\creative-commons.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\critical-role.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\css3-alt.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\css3.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\cuttlefish.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\d-and-d-beyond.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\d-and-d.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\dashcube.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\delicious.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\deploydog.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\deskpro.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\dev.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\deviantart.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\dhl.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\diaspora.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\digg.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\digital-ocean.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\discord.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\discourse.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\dochub.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\docker.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\draft2digital.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\dribbble-square.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\dribbble.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\dropbox.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\drupal.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\dyalog.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\earlybirds.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\ebay.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\edge.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\elementor.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\ello.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\ember.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\empire.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\envira.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\erlang.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\ethereum.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\etsy.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\evernote.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\expeditedssl.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\facebook-f.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\facebook-messenger.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\facebook-square.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\facebook.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\fantasy-flight-games.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\fedex.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\fedora.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\figma.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\firefox.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\first-order-alt.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\first-order.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\firstdraft.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\flickr.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\flipboard.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\fly.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\font-awesome-alt.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\font-awesome-flag.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\font-awesome-logo-full.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\font-awesome.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\fonticons-fi.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\fonticons.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\fort-awesome-alt.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\fort-awesome.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\forumbee.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\foursquare.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\free-code-camp.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\freebsd.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\fulcrum.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\galactic-republic.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\galactic-senate.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\get-pocket.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\gg-circle.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\gg.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\git-alt.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\git-square.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\git.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\github-alt.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\github-square.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\github.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\gitkraken.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\gitlab.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\gitter.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\glide-g.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\glide.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\gofore.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\goodreads-g.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\goodreads.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\google-drive.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\google-play.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\google-plus-g.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\google-plus-square.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\google-plus.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\google-wallet.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\google.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\gratipay.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\grav.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\gripfire.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\grunt.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\gulp.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\hacker-news-square.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\hacker-news.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\hackerrank.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\hips.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\hire-a-helper.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\hooli.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\hornbill.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\hotjar.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\houzz.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\html5.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\hubspot.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\imdb.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\instagram.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\intercom.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\internet-explorer.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\invision.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\ioxhost.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\itch-io.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\itunes-note.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\itunes.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\java.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\jedi-order.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\jenkins.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\jira.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\joget.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\joomla.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\js-square.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\js.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\jsfiddle.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\kaggle.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\keybase.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\keycdn.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\kickstarter-k.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\kickstarter.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\korvue.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\laravel.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\lastfm-square.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\lastfm.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\leanpub.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\less.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\line.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\linkedin-in.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\linkedin.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\linode.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\linux.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\lyft.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\magento.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\mailchimp.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\mandalorian.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\markdown.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\mastodon.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\maxcdn.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\medapps.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\medium-m.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\medium.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\medrt.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\meetup.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\megaport.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\mendeley.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\microsoft.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\mix.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\mixcloud.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\mizuni.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\modx.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\monero.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\napster.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\neos.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\nimblr.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\node-js.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\node.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\npm.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\ns8.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\nutritionix.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\odnoklassniki-square.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\odnoklassniki.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\old-republic.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\opencart.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\openid.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\opera.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\optin-monster.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\osi.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\page4.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\pagelines.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\palfed.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\patreon.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\paypal.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\penny-arcade.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\periscope.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\phabricator.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\phoenix-framework.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\phoenix-squadron.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\php.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\pied-piper-alt.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\pied-piper-hat.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\pied-piper-pp.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\pied-piper.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\pinterest-p.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\pinterest-square.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\pinterest.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\playstation.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\product-hunt.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\pushed.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\python.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\qq.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\quinscape.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\quora.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\r-project.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\raspberry-pi.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\ravelry.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\react.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\reacteurope.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\readme.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\rebel.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\red-river.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\reddit-alien.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\reddit-square.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\reddit.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\redhat.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\renren.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\replyd.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\researchgate.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\resolving.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\rev.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\rocketchat.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\rockrms.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\safari.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\salesforce.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\sass.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\schlix.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\scribd.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\searchengin.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\sellcast.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\sellsy.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\servicestack.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\shirtsinbulk.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\shopware.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\simplybuilt.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\sistrix.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\sith.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\sketch.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\skyatlas.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\skype.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\slack-hash.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\slack.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\slideshare.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\snapchat-ghost.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\snapchat-square.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\snapchat.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\soundcloud.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\sourcetree.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\speakap.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\speaker-deck.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\spotify.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\squarespace.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\stack-exchange.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\stack-overflow.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\stackpath.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\staylinked.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\steam-square.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\steam-symbol.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\steam.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\sticker-mule.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\strava.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\stripe-s.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\stripe.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\studiovinari.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\stumbleupon-circle.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\stumbleupon.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\superpowers.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\supple.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\suse.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\symfony.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\teamspeak.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\telegram-plane.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\telegram.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\tencent-weibo.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\the-red-yeti.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\themeco.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\themeisle.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\think-peaks.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\trade-federation.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\trello.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\tripadvisor.svg" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\svgs\brands\tumblr-square.svg" />
+    <Content Include="Content\UIContent\css\animate.css" />
+    <Content Include="Content\UIContent\css\bootstrap.min.css" />
+    <Content Include="Content\UIContent\css\custom-fonts.css" />
+    <Content Include="Content\UIContent\css\fancybox\blank.gif" />
+    <Content Include="Content\UIContent\css\fancybox\fancybox_loading.gif" />
+    <Content Include="Content\UIContent\css\fancybox\fancybox_overlay.png" />
+    <Content Include="Content\UIContent\css\fancybox\fancybox_sprite.png" />
+    <Content Include="Content\UIContent\css\fancybox\jquery.fancybox.css" />
+    <Content Include="Content\UIContent\css\flexslider.css" />
+    <Content Include="Content\UIContent\css\font-awesome.css" />
+    <Content Include="Content\UIContent\css\jcarousel.css" />
+    <Content Include="Content\UIContent\css\overwrite.css" />
+    <Content Include="Content\UIContent\css\style.css" />
+    <Content Include="Content\UIContent\fonts\customicon\Icons.svg" />
+    <Content Include="Content\UIContent\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\UIContent\img\avatar.png" />
+    <Content Include="Content\UIContent\img\bg_direction_nav.png" />
+    <Content Include="Content\UIContent\img\dummies\blog\65x65\thumb1.jpg" />
+    <Content Include="Content\UIContent\img\dummies\blog\65x65\thumb2.jpg" />
+    <Content Include="Content\UIContent\img\dummies\blog\65x65\thumb3.jpg" />
+    <Content Include="Content\UIContent\img\dummies\blog\img1.jpg" />
+    <Content Include="Content\UIContent\img\dummies\blog\img2.jpg" />
+    <Content Include="Content\UIContent\img\dummies\blog\img3.jpg" />
+    <Content Include="Content\UIContent\img\dummies\dummy-1.jpg" />
+    <Content Include="Content\UIContent\img\glyphicons-halflings-white.png" />
+    <Content Include="Content\UIContent\img\glyphicons-halflings.png" />
+    <Content Include="Content\UIContent\img\nivo-bullets.png" />
+    <Content Include="Content\UIContent\img\slides\1.jpg" />
+    <Content Include="Content\UIContent\img\slides\2.jpg" />
+    <Content Include="Content\UIContent\img\slides\3.jpg" />
+    <Content Include="Content\UIContent\img\works\1.jpg" />
+    <Content Include="Content\UIContent\img\works\2.jpg" />
+    <Content Include="Content\UIContent\img\works\3.jpg" />
+    <Content Include="Content\UIContent\img\works\4.jpg" />
+    <Content Include="Content\UIContent\img\works\5.jpg" />
+    <Content Include="Content\UIContent\img\works\6.jpg" />
+    <Content Include="Content\UIContent\img\works\7.jpg" />
+    <Content Include="Content\UIContent\img\works\8.jpg" />
+    <Content Include="Content\UIContent\skins\default.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\LoginScripts\js\demo\chart-area-demo.js" />
+    <Content Include="Scripts\LoginScripts\js\demo\chart-bar-demo.js" />
+    <Content Include="Scripts\LoginScripts\js\demo\chart-pie-demo.js" />
+    <Content Include="Scripts\LoginScripts\js\demo\datatables-demo.js" />
+    <Content Include="Scripts\LoginScripts\js\sb-admin.js" />
+    <Content Include="Scripts\LoginScripts\js\sb-admin.min.js" />
+    <Content Include="Scripts\UIScripts\js\animate.js" />
+    <Content Include="Scripts\UIScripts\js\bootstrap.min.js" />
+    <Content Include="Scripts\UIScripts\js\custom.js" />
+    <Content Include="Scripts\UIScripts\js\flexslider\jquery.flexslider.js" />
+    <Content Include="Scripts\UIScripts\js\flexslider\setting.js" />
+    <Content Include="Scripts\UIScripts\js\google-code-prettify\prettify.css" />
+    <Content Include="Scripts\UIScripts\js\google-code-prettify\prettify.js" />
+    <Content Include="Scripts\UIScripts\js\jquery.easing.1.3.js" />
+    <Content Include="Scripts\UIScripts\js\jquery.fancybox-media.js" />
+    <Content Include="Scripts\UIScripts\js\jquery.fancybox.pack.js" />
+    <Content Include="Scripts\UIScripts\js\jquery.flexslider.js" />
+    <Content Include="Scripts\UIScripts\js\jquery.js" />
+    <Content Include="Scripts\UIScripts\js\portfolio\jquery.quicksand.js" />
+    <Content Include="Scripts\UIScripts\js\portfolio\setting.js" />
+    <Content Include="Scripts\UIScripts\js\quicksand\jquery.quicksand.js" />
+    <Content Include="Scripts\UIScripts\js\quicksand\setting.js" />
+    <Content Include="Scripts\UIScripts\js\validate.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\AuthenticationPanel\AuthenticationPanelAreaRegistration.cs" />
+    <Compile Include="Areas\AuthenticationPanel\Controllers\AuthenticationController.cs" />
+    <Compile Include="Areas\AuthenticationPanel\Models\ViewModels\LoginViewModel.cs" />
+    <Compile Include="Areas\ManagementPanel\ManagementPanelAreaRegistration.cs" />
+    <Compile Include="Areas\UserPanel\Controllers\UserHomeController.cs" />
+    <Compile Include="Areas\UserPanel\UserPanelAreaRegistration.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\Authentication\AuthFilters\AdminAuth.cs" />
+    <Compile Include="Helpers\Authentication\AuthFilters\MasterAdminAuth.cs" />
+    <Compile Include="Helpers\Authentication\AuthFilters\UserAuth.cs" />
+    <Compile Include="Helpers\Authentication\UserAuthentication.cs" />
+    <Compile Include="Helpers\Security\ConvertByte.cs" />
+    <Compile Include="Helpers\Security\SHA512.cs" />
+    <Compile Include="Helpers\Security\TripleDESHelper.cs" />
+    <Compile Include="Models\MVCAuthenticationContext.cs" />
+    <Compile Include="Models\SessionSecurityKey.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UserLog.cs" />
+    <Compile Include="Models\ViewModels\AuthenticationSessionViewModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="Content\LoginContent\scss\sb-admin.scss" />
+    <Content Include="Content\LoginContent\scss\_cards.scss" />
+    <Content Include="Content\LoginContent\scss\_footer.scss" />
+    <Content Include="Content\LoginContent\scss\_global.scss" />
+    <Content Include="Content\LoginContent\scss\_login.scss" />
+    <Content Include="Content\LoginContent\scss\_mixins.scss" />
+    <Content Include="Content\LoginContent\scss\_navbar.scss" />
+    <Content Include="Content\LoginContent\scss\_utilities.scss" />
+    <Content Include="Content\LoginContent\scss\_variables.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\js\bootstrap.js.map" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\bootstrap-grid.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\bootstrap-reboot.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\bootstrap.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\mixins\_alert.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\mixins\_background-variant.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\mixins\_badge.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\mixins\_border-radius.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\mixins\_box-shadow.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\mixins\_breakpoints.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\mixins\_buttons.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\mixins\_caret.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\mixins\_clearfix.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\mixins\_deprecate.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\mixins\_float.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\mixins\_forms.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\mixins\_gradients.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\mixins\_grid-framework.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\mixins\_grid.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\mixins\_hover.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\mixins\_image.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\mixins\_list-group.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\mixins\_lists.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\mixins\_nav-divider.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\mixins\_pagination.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\mixins\_reset-text.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\mixins\_resize.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\mixins\_screen-reader.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\mixins\_size.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\mixins\_table-row.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\mixins\_text-emphasis.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\mixins\_text-hide.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\mixins\_text-truncate.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\mixins\_transition.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\mixins\_visibility.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\utilities\_align.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\utilities\_background.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\utilities\_borders.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\utilities\_clearfix.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\utilities\_display.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\utilities\_embed.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\utilities\_flex.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\utilities\_float.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\utilities\_overflow.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\utilities\_position.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\utilities\_screenreaders.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\utilities\_shadows.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\utilities\_sizing.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\utilities\_spacing.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\utilities\_stretched-link.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\utilities\_text.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\utilities\_visibility.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\vendor\_rfs.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\_alert.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\_badge.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\_breadcrumb.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\_button-group.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\_buttons.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\_card.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\_carousel.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\_close.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\_code.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\_custom-forms.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\_dropdown.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\_forms.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\_functions.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\_grid.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\_images.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\_input-group.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\_jumbotron.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\_list-group.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\_media.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\_mixins.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\_modal.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\_nav.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\_navbar.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\_pagination.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\_popover.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\_print.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\_progress.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\_reboot.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\_root.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\_spinners.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\_tables.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\_toasts.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\_tooltip.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\_transitions.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\_type.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\_utilities.scss" />
+    <Content Include="Content\LoginContent\vendor\bootstrap\scss\_variables.scss" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\less\brands.less" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\less\fontawesome.less" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\less\regular.less" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\less\solid.less" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\less\v4-shims.less" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\less\_animated.less" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\less\_bordered-pulled.less" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\less\_core.less" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\less\_fixed-width.less" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\less\_icons.less" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\less\_larger.less" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\less\_list.less" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\less\_mixins.less" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\less\_rotated-flipped.less" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\less\_screen-reader.less" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\less\_shims.less" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\less\_stacked.less" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\less\_variables.less" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\package.json" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\scss\brands.scss" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\scss\fontawesome.scss" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\scss\regular.scss" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\scss\solid.scss" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\scss\v4-shims.scss" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\scss\_animated.scss" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\scss\_bordered-pulled.scss" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\scss\_core.scss" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\scss\_fixed-width.scss" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\scss\_icons.scss" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\scss\_larger.scss" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\scss\_list.scss" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\scss\_mixins.scss" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\scss\_rotated-flipped.scss" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\scss\_screen-reader.scss" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\scss\_shims.scss" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\scss\_stacked.scss" />
+    <Content Include="Content\LoginContent\vendor\fontawesome-free\scss\_variables.scss" />
+    <Content Include="Content\UIContent\fonts\customicon\Icons.eot" />
+    <Content Include="Content\UIContent\fonts\customicon\Icons.ttf" />
+    <Content Include="Content\UIContent\fonts\customicon\Icons.woff" />
+    <Content Include="Content\UIContent\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\UIContent\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\UIContent\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\UIContent\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\UIContent\fonts\FontAwesome.otf" />
+    <Content Include="Areas\AuthenticationPanel\Views\web.config" />
+    <Content Include="Areas\UserPanel\Views\web.config" />
+    <Content Include="Areas\ManagementPanel\Views\web.config" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Areas\AuthenticationPanel\Data\" />
+    <Folder Include="Areas\AuthenticationPanel\Views\Authentication\" />
+    <Folder Include="Areas\AuthenticationPanel\Views\Shared\" />
+    <Folder Include="Areas\ManagementPanel\Controllers\" />
+    <Folder Include="Areas\ManagementPanel\Data\" />
+    <Folder Include="Areas\ManagementPanel\Views\Shared\" />
+    <Folder Include="Areas\UserPanel\Data\" />
+    <Folder Include="Areas\UserPanel\Views\Shared\" />
+    <Folder Include="Areas\UserPanel\Views\UserHome\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="Models\Entity\" />
+    <Folder Include="Views\Shared\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>55285</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44383/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
